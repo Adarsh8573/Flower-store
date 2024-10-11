@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple eCommerce Website</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="imgesh/flower logo.jpg">Flowers Store</div>
+        <nav>
+            <ul>
+                <li><a href="ecom.html">Home</a></li>
+                <li><a href="about.html">about</a></li>
+                    <li><a href="services.html">services</a></li>
+                    <li><a href="shop.html">Shop</li>
+                    <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <span id="cart-count">0</span>🛒
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Rose Products</h2>
+            <div class="product-list" id="product-list">
+                <div class="product-item" data-id="1">
+                    <img src="imgesh/red rose.jpg" style="height: 68%;" alt="Product 1">
+                    <h3>Rose</h3>
+                    <p>$10.00</p>
+                    <button onclick="addToCart(1, 'Product 1', 10)">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2">
+                    <img src="imgesh/blue rose.jpg" style="height: 68%;" alt="Product 2">
+                    <h3>Blue Rose</h3>
+                    <p>$89.00</p>
+                    <button onclick="addToCart(2, 'Product 2', 15)">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="3">
+                    <img src="imgesh/pink rose.jpg" style="height: 68%;" alt="Product 3">
+                    <h3>Pink Rose</h3>
+                    <p>$180.00</p>
+                    <button onclick="addToCart(3, 'Product 3', 20)">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="4">
+                    <img src="imgesh/flower bouquet.jpg" style="height: 68%;" alt="Product 4">
+                    <h3>Pink Bouquet</h3>
+                    <p>$300.00</p>
+                    <button onclick="addToCart(4, 'Product 4', 30)">Add to Cart</button>
+                </div>
+                
+            </div>
+        </section>
+        <section class="products">
+            <h2>Tulip Products</h2>
+            <div class="product-list" id="product-list">
+                <div class="product-item" data-id="1">
+                    <img src="imgesh/red tupile.jpg" alt="Product 1"><br><br>
+                    <h3>Red tupile</h3>
+                    <p>$99.00</p>
+                    <button onclick="addToCart(1, 'Product 1', 10)">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="2">
+                    <img src="imgesh/tupil purpule.jpg" alt="Product 2"><br><br>
+                    <h3>Purpule Tulip</h3>
+                    <p>$150.00</p>
+                    <button onclick="addToCart(2, 'Product 2', 15)">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="3">
+                    <img src="imgesh/Siviga tulip.jpg" style="height: 64%;" alt="Product 3"><br><br>
+                    <h3>Siviga tulip</h3>
+                    <p>$190.00</p>
+                    <button onclick="addToCart(3, 'Product 3', 20)">Add to Cart</button>
+                </div>
+                <div class="product-item" data-id="4">
+                    <img src="imgesh/white tulip.jpg" alt="Product 4"><br><br>
+                    <h3>white Tulip</h3>
+                    <p>$80.00</p>
+                    <button onclick="addToCart(4, 'Product 4', 30)">Add to Cart</button>
+                </div>
+                
+            </div>
+        </section>
+        <section class="cart-details" id="cart-details" style="display: none;">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p id="total-price">Total: $0.00</p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 My eCommerce Store. All rights reserved.</p>
+       <a href="#"> <i class="bi bi-twitter"></i></a>
+       <a href="#"><i class="bi bi-github"></i></a>
+       <a href="#"><i class="bi bi-whatsapp"></i></a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
